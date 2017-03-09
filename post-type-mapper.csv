@@ -1,0 +1,23 @@
+"Post Type","Meta Key","Taxonomies"
+post,gdlr-core-page-option,category
+" ",gdlr-core-page-builder,post_tag
+page,_customize_draft_post_name,
+" ",_thumbnail_id,
+" ",_wp_page_template,
+" ",gdlr-core-page-option,
+" ",gdlr-core-page-builder,
+attachment,_wp_attached_file,
+" ",_wp_attachment_metadata,
+" ",_starter_content_theme,
+" ",_customize_draft_post_name,
+nav_menu_item,,nav_menu
+wpcf7_contact_form,_form,
+" ",_mail,
+" ",_mail_2,
+" ",_messages,
+" ",_additional_settings,
+" ",_locale,
+personnel,gdlr-core-page-option,personnel_category
+" ",gdlr-core-page-builder,
+portfolio,gdlr-core-page-option,portfolio_category
+" ",gdlr-core-page-builder,portfolio_tag

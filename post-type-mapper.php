@@ -33,6 +33,18 @@ if ( ! class_exists( 'Post_Type_Mapper' ) ) {
 		 * @since		1.0.0
 		 */
 		private $admin_errors;
+		
+		/**
+		 * @var			Post_Type_Mapper $admin Holds the Admin Page
+		 * @since		1.0.0
+		 */
+		public $admin;
+		
+		/**
+		 * @var			Post_Type_Mapper $rest Holds the Rest API Endpoint
+		 * @since		1.0.0
+		 */
+		public $rest;
 
 		/**
 		 * Get active instance
@@ -161,6 +173,17 @@ if ( ! class_exists( 'Post_Type_Mapper' ) ) {
 		 * @return	  void
 		 */
 		private function require_necessities() {
+			
+			if ( is_admin() &&
+			   current_user_can( 'manage_options' ) ) {
+				
+				require_once Post_Type_Mapper_DIR . 'core/admin/class-post-type-mapper-admin.php';
+				$this->admin = new Post_Type_Mapper_Admin();
+				
+			}
+			
+			require_once Post_Type_Mapper_DIR . 'core/rest/class-post-type-mapper-rest.php';
+			$this->rest = new Post_Type_Mapper_Rest();
 			
 		}
 		
